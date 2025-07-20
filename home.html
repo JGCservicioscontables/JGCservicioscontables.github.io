@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JGC Servicios Contables</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div id="cuerpo">
+        <div>
+            <div>
+                <video id="cabecera" autoplay muted>
+                    <source src="videos/diseño-cabecera.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+            </div>
+
+            <hr>
+
+            <nav>
+                <a class="menu" href="index.html">Home</a>
+                <a class="menu" href="carga_n.html">Nosotros</a>
+                <a class="menu" href="carga_s.html">Servicios</a>
+            </nav>
+
+            <hr>
+        </div>
+        <div>
+            <video autoplay loop muted>
+                <source src="videos/presentacion.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+        </div>
+
+        <hr>
+
+        <form action="https://formspree.io/f/myzjobgn" method="post">
+            <h3>¿Nos contactamos?</h3>
+
+            <p id="maquina">Dejanos tu nombre</p>
+            <input type="text" name="nombre" required placeholder="Ej: Raúl Córdoba">
+
+            <p id="maquina">Dejanos tu número</p>
+            <input type="tel" name="numero" maxlength="12" required placeholder="Ej: 3511111111">
+
+            <p id="maquina">Mensaje</p>
+            <textarea name="mensaje" cols="30" rows="10" placeholder="Escribí tu consulta"></textarea>
+
+            <input type="submit" value="Enviar" id="boton">
+        </form>
+
+        <hr>
+
+        <footer>
+            <p id="copy">&copy; 2025 JGC Servicios Contables</p>
+            <a href="https://www.instagram.com/next_level_technology_oficial/" id="nlt">
+                Made by Next Levels Technology
+            </a>
+        </footer>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=3513466339&text=Hola,%20quiero%20hacer%20una%20consulta&#128516"
+        class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <a href="https://www.instagram.com/jgc.servcontables" class="instagram-float" target="_blank"
+        aria-label="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+</body>
+
+</html>

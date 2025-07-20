@@ -1,9 +1,80 @@
+.cuerpo {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 15%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+svg.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 20;
+    --uib-color: rgb(0, 0, 0);
+    --uib-speed: 1.5s;
+    --uib-bg-opacity: 0.15;
+}
+
+.track {
+    fill: none;
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+    stroke-width: 0.5;
+    transition: stroke 0.5s ease;
+}
+
+.car {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 10 90;
+    stroke-dashoffset: 0;
+    stroke-width: 0.5;
+    animation: travel var(--uib-speed) linear infinite;
+    transition: stroke 0.5s ease;
+}
+
+@keyframes travel {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -100;
+    }
+}
+
 /* Para pantallas medianas*/
 h1 {
     text-align: center;
     font-size: 3vw;
     text-decoration: underline;
     margin: 0px;
+    box-shadow: 3px 4px 5px gray;
 }
 
 h2,
@@ -46,6 +117,7 @@ a {
     border-style: double;
     color: black;
     text-decoration: none;
+    box-shadow: 3px 4px 5px gray;
 
 }
 
@@ -76,6 +148,7 @@ img {
     justify-self: center;
     width: 45vw;
     height: 40vw;
+    box-shadow: 3px 4px 5px gray;
 }
 
 #subir,
@@ -118,6 +191,7 @@ img {
     font-size: 2.2vw;
     border-style: double;
     color: rgb(255, 255, 255);
+    box-shadow: 3px 4px 5px white;
 }
 
 #boton_servicios:hover {
@@ -177,6 +251,7 @@ form {
     border-style: double;
     margin-bottom: 0px;
     background-color: rgb(231, 231, 231);
+    box-shadow: 3px 1px 3px gray;
 }
 
 input,
@@ -187,6 +262,7 @@ textarea {
     text-align: center;
     transition: 0.3s ease, transform 0.2s ease;
     font-size: 1.5vw;
+    box-shadow: 3px 1px 3px gray;
 }
 
 input:focus,
@@ -204,6 +280,7 @@ textarea:focus {
     cursor: pointer;
     transition: 0.3s ease, color 0.3s ease;
     padding: 1.5vw;
+    box-shadow: 3px 1px 3px gray;
 }
 
 #boton:hover {
@@ -331,17 +408,24 @@ footer {
         font-size: 5vw;
     }
 
+    #cabecera {
+        width: 30vw;
+        height: auto;
+    }
+
     nav {
-        font-size: 3.3vw;
+        font-size: 3.9vw;
         top: 1.5vw;
-        left: 2vw;
+        left: 1.7vw;
     }
 
     img {
-        display: flex;
-        justify-self: center;
         width: 90vw;
-        height: 40vw;
+        height: 56vw;
+    }
+
+    #nosotros_video {
+        height: 61vw;
     }
 
     #subir,
@@ -350,149 +434,69 @@ footer {
     #subir3,
     #subirN1 {
         flex-direction: column;
-        font-size: 2.1vw;
-        opacity: 0;
-        position: absolute;
-        transform: translateX(-10%) translateY(5%);
-        text-align: center;
-        animation: subir 1.5s ease-out forwards;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        margin-left: 45%;
+        font-size: 2.7vw;
+        margin-left: 45.5%;
         margin-right: -30%;
+        margin-top: -57%;
     }
 
     #subirN1 {
-        margin-top: -45%;
-        margin-left: 50%;
+        margin-top: -60%;
+        margin-left: 48%;
         margin-right: -40%;
-        font-size: 2.3vw;
-    }
-
-    @keyframes subir {
-        to {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
     }
 
     #serviciostotal {
         display: list-item;
     }
 
-    hr {
-        height: 0.1vw;
-        border-style: double;
-    }
-
     #boton_servicios {
-        font-size: 2.5vw;
-        border-style: double;
-        color: rgb(255, 255, 255);
-    }
-
-    #boton_servicios:hover {
-        color: white;
+        font-size: 3.3vw;
     }
 
     .whatsapp-float,
     .instagram-float {
-        position: fixed;
-        width: 6vw;
-        height: 6vw;
+        width: 8vw;
+        height: 8vw;
         bottom: 2vw;
         right: 2vw;
-        background-color: #25D366;
-        color: white;
         border-radius: 50vw;
-        text-align: center;
-        font-size: 4vw;
-        box-shadow: 0.5vw 0.5vw 0.5vw rgba(0, 0, 0, 0.3);
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease;
     }
 
     .instagram-float {
-        background-color: #E1306C;
-        transition: transform 0.3s ease;
-        right: 10vw;
-    }
-
-    .whatsapp-float:hover,
-    .instagram-float:hover {
-        transform: scale(1.1);
+        right: 12vw;
     }
 
     .whatsapp-float img,
     .instagram-float img {
-        width: 4vw;
-        height: 4vw;
+        width: 6vw;
+        height: 6vw;
     }
 
     form {
-        justify-items: center;
-        font-size: 2vw;
-        text-align: center;
+        font-size: 3.4vw;
     }
 
     #maquina {
-        text-align: center;
-        width: 35vw;
-        border-style: double;
-        margin-bottom: 0px;
-        background-color: rgb(231, 231, 231);
+        width: 70vw;
     }
 
     input,
     textarea {
-        width: 35vw;
-        border-style: double;
+        width: 70vw;
         border-radius: 4px;
-        text-align: center;
-        transition: 0.3s ease, transform 0.2s ease;
-        font-size: 1.5vw;
-    }
-
-    input:focus,
-    textarea:focus {
-        background-color: rgba(255, 255, 255, 0.2);
-        transform: scale(1.02);
+        font-size: 3vw;
     }
 
     #boton {
-        display: flex;
-        justify-self: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-style: double;
-        cursor: pointer;
-        transition: 0.3s ease, color 0.3s ease;
         padding: 1.5vw;
     }
 
-    #boton:hover {
-        color: white;
-        background: linear-gradient(90deg, rgb(136, 136, 136) 0%, rgb(0, 0, 0) 50%, rgb(136, 136, 136) 100%);
-    }
-
     footer {
-        color: black;
-        justify-items: center;
-        text-align: center;
-        font-size: 2vw;
-    }
-
-    #copy {
-        width: 35vw;
-        border-style: none;
-        margin-bottom: 2px;
-        background-color: rgb(255, 255, 255);
+        font-size: 3.3vw;
     }
 
     #nlt {
-        font-size: 1.6vw;
+        font-size: 3vw;
     }
 }
