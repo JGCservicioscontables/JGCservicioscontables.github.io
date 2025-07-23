@@ -405,27 +405,27 @@ footer {
 /* Para pantallas chicas*/
 @media (max-width:1000px) {
     h1 {
-        font-size: 5vw;
+        font-size: 7.5vw;
     }
 
     #cabecera {
-        width: 30vw;
+        width: 34vw;
         height: auto;
     }
 
     nav {
-        font-size: 3.9vw;
-        top: 1.5vw;
-        left: 1.7vw;
+        font-size: 4.8vw;
+        top: 1.3vw;
+        left: 2.1vw;
     }
 
     img {
         width: 90vw;
-        height: 56vw;
+        height: 63vw;
     }
 
     #nosotros_video {
-        height: 61vw;
+        height: 71vw;
     }
 
     #subir,
@@ -434,14 +434,18 @@ footer {
     #subir3,
     #subirN1 {
         flex-direction: column;
-        font-size: 2.7vw;
+        font-size: 3.1vw;
         margin-left: 45.5%;
         margin-right: -30%;
-        margin-top: -57%;
+        margin-top: -63%;
+    }
+
+    #subir2 {
+        margin-top: -64%;
     }
 
     #subirN1 {
-        margin-top: -60%;
+        margin-top: -73%;
         margin-left: 48%;
         margin-right: -40%;
     }
@@ -451,7 +455,7 @@ footer {
     }
 
     #boton_servicios {
-        font-size: 3.3vw;
+        font-size: 3.8vw;
     }
 
     .whatsapp-float,
